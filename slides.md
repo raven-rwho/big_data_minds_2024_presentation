@@ -22,28 +22,22 @@ transition: slide-left
 mdc: true
 ---
 
-# Welcome to Slidev
+# Implementing and scaling of Data Mesh while using Palantir Foundry
+## a retrospective of the last 6 year journey
 
-Presentation slides for developers
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+Let me tell you a story
+The year is 2018 and we are in Berlin. More precisely in the office area of Axel Springer National Media&Tech - at this time called Spring MEdia.
+New Slide
+Our protagonist in this story is Eliza (all names are fictitious). She is a Data Scientist (PhD in statistics and really good with Pandas, ScikitLearn, and ML models in general)
+Her task is to figure out in the massive data set that is describing the behavioral data of germanies biggest newspaper, the most relevant features that are responsible to keep a user in the subscription.
+She was super exited - she was noodling on the problem - which could be the right ml model to approach it? Maybe some easy linear regression or should she go for the guns and try something really fancy with deep learning?
+Well let`s burn that bridge when I crossed it and start with something easy - get the data and start to make my hands dirty!
+But wait, how do I get the data? I don't have access to the oracle cluster that all the raw events that I definitely need are stored...
+Hmmm, can't be so hard to get access, let's figure out who is responsible and can give me access.
+Let me introduce our next actor in this scenario - let's call him Günther - and he is the product owner for the one central data warehouse team for the whole organization. Günther isn't per se a villain - actually he want's to help, but he simply can't, because the workload on his team, which isn't small - but never big enough - is simply crazy. There are analytical request from all parts of the org - new sources needs to be connected, the data quality is - let's say questionable - on all sides - ahhh and one more fun fact the data warehouse grew over the last years to more than 2500 tables, without documentation and even worse, inconsistent naming - there are so many tables that are mapping id_muh to id_narf (this are the real names...) and the responsible developer left the company 6 months ago, that in simple terms - no one has an idea what is going on... and in all this Eliza is sending requests that she needs the raw data and maybe a bit of documentation to understand it....
+
 -->
 
 ---
