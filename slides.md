@@ -3,7 +3,7 @@
 theme: seriph
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
+background: /intro.png
 # some information about your slides (markdown enabled)
 title: Welcome to Slidev
 info: |
@@ -24,41 +24,26 @@ mdc: true
 
 # Implementing and scaling of Data Mesh while using Palantir Foundry
 ## a retrospective of the last 6 year journey
-
-
-<!--
-Let me tell you a story
-The year is 2018 and we are in Berlin. More precisely in the office area of Axel Springer National Media&Tech - at this time called Spring MEdia.
-New Slide
-Our protagonist in this story is Eliza (all names are fictitious). She is a Data Scientist (PhD in statistics and really good with Pandas, ScikitLearn, and ML models in general)
-Her task is to figure out in the massive data set that is describing the behavioral data of germanies biggest newspaper, the most relevant features that are responsible to keep a user in the subscription.
-She was super exited - she was noodling on the problem - which could be the right ml model to approach it? Maybe some easy linear regression or should she go for the guns and try something really fancy with deep learning?
-Well let`s burn that bridge when I crossed it and start with something easy - get the data and start to make my hands dirty!
-But wait, how do I get the data? I don't have access to the oracle cluster that all the raw events that I definitely need are stored...
-Hmmm, can't be so hard to get access, let's figure out who is responsible and can give me access.
-Let me introduce our next actor in this scenario - let's call him Günther - and he is the product owner for the one central data warehouse team for the whole organization. Günther isn't per se a villain - actually he want's to help, but he simply can't, because the workload on his team, which isn't small - but never big enough - is simply crazy. There are analytical request from all parts of the org - new sources needs to be connected, the data quality is - let's say questionable - on all sides - ahhh and one more fun fact the data warehouse grew over the last years to more than 2500 tables, without documentation and even worse, inconsistent naming - there are so many tables that are mapping id_muh to id_narf (this are the real names...) and the responsible developer left the company 6 months ago, that in simple terms - no one has an idea what is going on... and in all this Eliza is sending requests that she needs the raw data and maybe a bit of documentation to understand it....
-
--->
+17.9.24 Berlin - Peter Krauß-Hohl
 
 ---
 transition: fade-out
+class: text-center
 ---
-
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
 <br>
 <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+## Let me tell you a story
+
+<br>
+<br>
+
+## The year is 2018 and we are in Berlin. 
+<br>
+<br>
+
+## More precisely in the office of Axel Springer National Media&Tech.
+
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -82,551 +67,289 @@ Here is another comment.
 -->
 
 ---
-transition: slide-up
-level: 2
+layout: image-right
+image: /eliza.png
 ---
 
-# Navigation
+# Our Protagonist
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-## Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
----
-layout: two-cols
-layoutClass: gap-16
----
-
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc v-click minDepth="1" maxDepth="2"></Toc>
+Our protagonist in this story is Eliza (name is fictitious). She is a Data Scientist (PhD in statistics and really good with Pandas, ScikitLearn and ML models in general)
+<br>
+<br>
+Her task is to figure out in the massive data set that is describing the behavioral data of germanies biggest newspaper, the most relevant features that are responsible to keep a user in the subscription.
+<br>
+<br>
+She was super exited - and noodling on the problem - which could be the right ml model to approach it? Maybe some easy linear regression or should she go for the guns and try something really fancy with deep learning?
+<br>
+<br>
 
 ---
 layout: image-right
-image: https://cover.sli.dev
+image: /eliza_equations.png
 ---
 
-# Code
+# How?
+<br>
+<br>
 
-Use code snippets and get the highlighting directly, and even types hover![^1]
+Well let`s burn that bridge when we crossed it and start with something easy - __get the data and start to make my hands dirty!__
 
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
+But wait, __how do I get the data?__ I don't have access to the oracle cluster that all the raw events that I definitely need are stored...
 
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-[^1]: [Learn More](https://sli.dev/guide/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
+Hmmm, can't be so hard to get access, let's figure out who is responsible and can give me access.
 
 ---
-level: 2
+layout: image-right
+image: /guenther.png
 ---
 
-# Shiki Magic Move
+# Günther - PO central DWH
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
+Günther is no villain -  he would love to help but...
 
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
+- There are analytical request from all parts of the org 
+- the data quality is - let's say questionable
+- dwh conssts of 2500 tables, without documentation and inconsistent naming (mapping tables from id_a -> id_b)
+- the developer retention is 6 months
+- he is PO number 15 in 2 years
 
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
+<small> -> Eliza is sending requests that she needs the raw data and maybe a bit of documentation to understand it.... which simply does not exist in the whole org...
+</small> 
 
 ---
+layout: image-right
+image: /peter_cartoon.png
+---
 
-# Components
+# Peter
+We need a Data Lake
 
-<div grid="~ cols-2 gap-4">
-<div>
+Our next actor in this story is entering the stage - let's call him
+Peter - yes that is really his name -
+and he got the task from his boss to build up a data lake infrastructure that allows the storage and work with vast amounts of data - and after speaking with Eliza, he realized that 
 
-You can use Vue components directly inside your slides.
+<v-click>
+<div style="display: flex; justify-content: center; align-items: center;">
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
+__Time to data__ -> is the crucial KPI to work on.
 
 </div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
+</v-click>
 
 ---
-class: px-20
+layout: image-right
+image: /foundry.png
 ---
 
-# Themes
+# Palantir Foundry
+<br>
+Luckily we had the possibility to introduce Foundry from the company Palantir quite fast in our org and by following a few simple rules (which were hard to maintain), we managed to build up an environment in which every employ who get's her login to our Single-Sign on has immediate access to all the data and access to a quite powerful tool-set to work with it
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
 ---
-theme: default
+theme: seriph
+layout: image-right
+image: /rules.png
 ---
-```
 
-```yaml
+# Rules
+
+1. only sources that we know already that we need are allowed to be connected to the Data Lake
+2. everyone gets reading access to everything
+3. __no dependencies__ <- copy it and build your own pipeline 
+<br>
+<br>
+<br>
+<br>
+<br>
+<v-click>
+-> Hey, wait sounds nice - but wasn't this talk about Data Mesh???
+</v-click>
+
 ---
 theme: seriph
 ---
-```
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
+# Let's jump some years into the future!
+<div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/IIl8y89gGJM?si=Iy0dWcL_YqOyFLgD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-<picture>; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+---
+theme: seriph
+---
 
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
+# Do you remember rule #3 
+3. __no dependencies__ <- copy it and build your own pipeline 
+
+Well this caused some interesting things - on one hand it worked brilliantly - the teams were super fast. They had everything that they needed and build one feature after the other and created really interesting Data Sets inside Foundry, which were - based on rule #2 - accessible to everyone. There were stuff like the "Reading Interest" or "Trend Score" which was so good, that other teams decided to "try out something" on top of that data sets. Of course the corresponding teams did not speak with each other, because it was not needed and the consuming team - just wanted to "try out something"
 
 ---
 
-# Clicks Animations
+# Nothing lasts as long as a temporary solution
 
-You can add `v-click` to elements to add a click animation.
+So, here we are with the most tricky dependency that you could imagine - because we were not even aware of it and what happens always if there is something like this - you realize it because it brakes
 
-<div v-click>
+<div style="display: flex; justify-content: center; align-items: center; height: 100%;">
 
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
-</div>
-
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn More](https://sli.dev/guide/animations#click-animation)
-
-</div>
-
----
-
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
+```mermaid {theme: 'neutral', scale: 0.8}
+graph TD
+B[Source] -->|Team1| C[Product]
 ```
 
 ```mermaid {theme: 'neutral', scale: 0.8}
 graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
+B[Source] -->|Team1| C[Product]
+C[Product] -->|Team2| D[Product 2]
+
+style D fill:#AF312A,stroke:#333,stroke-width:4px
+
 ```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
 </div>
 
-Learn More: [Mermaid Diagrams](https://sli.dev/guide/features/mermaid) and [PlantUML Diagrams](https://sli.dev/guide/features/plantuml)
-
 ---
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
+layout: image-right
+image: /super_hero.png
 ---
 
-# Draggable Elements
+# Data Mesh for the rescue
+Like in the discusion about Micro Services or a monolithic structure - this is just about scaling the service that you are working on to many people and therefore the Data Mesh approach offers some tooling
 
-Double-click on the draggable elements to edit their positions.
+<div style="display: flex; justify-content: center; align-items: center;">
 
-<br>
+```mermaid {theme: 'neutral', scale: 0.8}
+graph TD
+B[Source] -->|Team1| C[Product]
+C[Product] -->|Team2| D[Product 2]
 
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
+style D fill:#AF312A,stroke:#333,stroke-width:4px
 ```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <carbon:arrow-up />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="663,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
+</div>
 
 ---
-src: ./pages/imported-slides.md
-hide: false
+theme: seriph
 ---
 
+# Core Ideas of Data Mesh
+
+- Decentralized teams and data ownership
+
+- Data Products powered by Domain Driven Design
+
+- Self-serve Shared Data Infrastructure
+
+- Global federated Governance
+
+[Zhamak Dehghani](https://martinfowler.com/articles/data-mesh-principles.html)
+[Book - Data Mesh](https://martinfowler.com/articles/data-mesh-principles.html)---
+
+---
+theme: seriph
 ---
 
-# Monaco Editor
+# Data Products powered by Domain Driven Design
 
-Slidev provides built-in Monaco Editor support.
+- **Discoverable**
+  - <small>Set of meta information to allow the automatic registration in a central registry.</small>
 
-Add `{monaco}` to the code block to turn it into an editor:
 
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
+<v-click>
 
-const arr = ref(emptyArray(10))
-```
+- **Understandable**
+  - The specific meaning of coherent data - what kind of entities and the relationships between them
 
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
+</v-click>
 
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
+<v-click>  
 
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
+- **Addressable**
+  - A data product offers a permanent and unique address to allow the user or system to access it.
+  
+</v-click>
+
+<v-click>
+
+- **Natively Accessible**
+  - It can be accessed by different personas - scientist (SQL), engineers (API) , analyst(Spreadsheet or SQL)
+
+</v-click>
+
+<v-click>
+
+- **Secure**
+  - Encryption, Access Control, Data retention, Regulations, Confidentially Levels
+
+</v-click>
+
+<v-click>
+
+- **Trustworthy**
+  - Interval of Change, Timeliness Completeness, Stat shape of data, precision&accuracy over time
+
+</v-click>
+
+<v-click>
+
+- **Interoperable**
+  - Type (explicitly defined types), polysemes identifiers, global adress, linking and reuse schema, data linking,
+
+</v-click>
+
+<v-click>
+
+- **Valuable on its own**
+  - No need to add more to be generate value
+
+</v-click>
+
+---
+layout: full
+---
+
+# What does this mean for us
+
+- Luckily Foundry is dealing with some points
+- Only Data sets that are listed in the data catalogue can be used from others
+- If you build something on top of a data set by someone else - tell them!
+- The lineage must be documented
+
+---
+layout: statement
+---
+
+# Data Mesh or Central Data Team?
+
+
+50 shades of grey -> there is no binary answer. 
+
+If your data product is mature enough that others wanna use it - it makes sense to build as a product - not before! It is quite some effort to maintain it and define an interface.
+
+---
+layout: end
+class: text-center
+---
+
+# Thank You
+
+### Thats me
+
+[Blog](https://pkrauss-hohl.site) · [GitHub](https://github.com/raven-rwho) · [Linkedin](https://www.linkedin.com/in/kraussdevelopment/)
+
+<PoweredBySlidev mt-10 />
 
 ---
 layout: center
 class: text-center
 ---
 
-# Learn More
+# Questions?
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+---
+layout: image-right
+image: /eliza.png
+---
 
-<PoweredBySlidev mt-10 />
+# A question that you might have
+What happened to Eliza?
+
+<v-click>
+She worked on several ML based products and was a core contributer to our dynamic pricing intiative - the churn use-case that she started with was ended quite soon...
+</v-click>
