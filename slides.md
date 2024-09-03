@@ -118,6 +118,15 @@ Günther is no villain -  he would love to help but...
 
 ---
 layout: image-right
+image: /eliza_frust.png
+---
+# How should I work on my churn problem then???
+
+After waiting 6 weeks Eliza got one copy of a table via E-Mail and realized after 6 hours that she needs different data and don't get an answer
+
+
+---
+layout: image-right
 image: /peter_cartoon.png
 ---
 
@@ -146,7 +155,6 @@ image: /foundry.png
 Luckily we had the possibility to introduce Foundry from the company Palantir quite fast in our org and by following a few simple rules (which were hard to maintain), we managed to build up an environment in which every employ who get's her login to our Single-Sign on has immediate access to all the data and access to a quite powerful tool-set to work with it
 
 ---
-theme: seriph
 layout: image-right
 image: /rules.png
 ---
@@ -166,44 +174,61 @@ image: /rules.png
 </v-click>
 
 ---
-theme: seriph
+layout: full
 ---
 
 # Let's jump some years into the future!
 <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/IIl8y89gGJM?si=Iy0dWcL_YqOyFLgD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-<picture>; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
 ---
-theme: seriph
+layout: default
 ---
 
-# Do you remember rule #3 
-3. __no dependencies__ <- copy it and build your own pipeline 
+# What has happened?
 
-Well this caused some interesting things - on one hand it worked brilliantly - the teams were super fast. They had everything that they needed and build one feature after the other and created really interesting Data Sets inside Foundry, which were - based on rule #2 - accessible to everyone. There were stuff like the "Reading Interest" or "Trend Score" which was so good, that other teams decided to "try out something" on top of that data sets. Of course the corresponding teams did not speak with each other, because it was not needed and the consuming team - just wanted to "try out something"
+<div style="display: flex; gap: 65px; align-items: center;">
 
+  <!-- First image -->
+  <v-click>
+    <img src="/data_product_1.png" alt="Image 1" style="width: 90px;">
+  </v-click>
+
+  <!-- Second image -->
+  <v-click>
+    <img src="/data_product_2.png" alt="Image 2" style="width: 210px;">
+  </v-click>
+
+  <!-- Third image -->
+  <v-click>
+    <img src="/data_product_3.png" alt="Image 3" style="width: 273px;">
+  </v-click>
+
+</div>
+
+---
+layout: image-right
+image: /tradeoff.png
+---
+
+# Independent vs central
+
+
+## There is a indissoluble tradeoff between 
+- Independecy
+  - the fastest and most expensive
+- Centralization
+  - more cost-efficient 
+---
+layout: image-right
+image: /shantytown.png
 ---
 
 # Nothing lasts as long as a temporary solution
 
-So, here we are with the most tricky dependency that you could imagine - because we were not even aware of it and what happens always if there is something like this - you realize it because it brakes
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Source] -->|Team1| C[Product]
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Source] -->|Team1| C[Product]
-C[Product] -->|Team2| D[Product 2]
-
-style D fill:#AF312A,stroke:#333,stroke-width:4px
-
-```
-</div>
+## Yes the team "just" wanted to build a prototype/PoC or first idea...
 
 ---
 layout: image-right
@@ -213,16 +238,7 @@ image: /super_hero.png
 # Data Mesh for the rescue
 Like in the discusion about Micro Services or a monolithic structure - this is just about scaling the service that you are working on to many people and therefore the Data Mesh approach offers some tooling
 
-<div style="display: flex; justify-content: center; align-items: center;">
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Source] -->|Team1| C[Product]
-C[Product] -->|Team2| D[Product 2]
-
-style D fill:#AF312A,stroke:#333,stroke-width:4px
-```
-</div>
+<!-- add picture of the fixed graph-->
 
 ---
 theme: seriph
