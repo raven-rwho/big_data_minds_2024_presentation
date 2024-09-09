@@ -33,7 +33,7 @@ class: text-center
 <br>
 <br>
 
-## Let me tell you a story
+# Let me tell you a story
 
 <br>
 <br>
@@ -68,44 +68,12 @@ Here is another comment.
 
 ---
 layout: image-right
-image: /eliza.png
----
-
-# Our Protagonist
-
-Our protagonist in this story is Eliza (name is fictitious). She is a Data Scientist (PhD in statistics and really good with Pandas, ScikitLearn and ML models in general)
-<br>
-<br>
-Her task is to figure out in the massive data set that is describing the behavioral data of germanies biggest newspaper, the most relevant features that are responsible to keep a user in the subscription.
-<br>
-<br>
-She was super exited - and noodling on the problem - which could be the right ml model to approach it? Maybe some easy linear regression or should she go for the guns and try something really fancy with deep learning?
-<br>
-<br>
-
----
-layout: image-right
-image: /eliza_equations.png
----
-
-# How?
-<br>
-<br>
-
-Well let`s burn that bridge when we crossed it and start with something easy - __get the data and start to make my hands dirty!__
-
-But wait, __how do I get the data?__ I don't have access to the oracle cluster that all the raw events that I definitely need are stored...
-
-Hmmm, can't be so hard to get access, let's figure out who is responsible and can give me access.
-
----
-layout: image-right
 image: /guenther.png
 ---
 
-# Günther - PO central DWH
+# Our protagonist
 
-Günther is no villain -  he would love to help but...
+Günther aka PO central DWH -  he would love to help but...
 
 - There are analytical request from all parts of the org 
 - the data quality is - let's say questionable
@@ -113,8 +81,51 @@ Günther is no villain -  he would love to help but...
 - the developer retention is 6 months
 - he is PO number 15 in 2 years
 
-<small> -> Eliza is sending requests that she needs the raw data and maybe a bit of documentation to understand it.... which simply does not exist in the whole org...
+---
+layout: image-right
+image: /eliza.png
+---
+
+# Data Science
+
+Eliza (name is fictitious) is a Data Scientist 
+
+She is hired to figure out ihow to keep a user in the subscription for germanies biggest newspaper.
+
+She was super exited:
+- what is the right ml model to approach it
+- Maybe some easy linear regression
+-  or deep learning
+
+---
+layout: image-right
+image: /eliza_equations.png
+---
+
+# First things first
+<br>
+<br>
+
+__get the data and make my hands dirty!__
+
+But wait, __how do I get the data?__ I don't have access to the Oracle cluster that all the raw events that I definitely need are stored...
+
+Hmmm, can't be so hard to get access, let's ask Günther!
+
+<small> -> Eliza is sending requests that she needs the raw data and maybe a bit of documentation to understand it.... 
 </small> 
+
+---
+layout: image-right
+image: /guenther_helpless.png
+---
+# There is no way to help
+
+Guenther would love to help Eliza, but there is no way to prioritize her higher and he can't give her access, because:
+
+- not allowed
+- license
+- no one who has the time to explain
 
 ---
 layout: image-right
@@ -124,7 +135,6 @@ image: /eliza_frust.png
 
 After waiting 6 weeks Eliza got one copy of a table via E-Mail and realized after 6 hours that she needs different data and don't get an answer
 
-
 ---
 layout: image-right
 image: /peter_cartoon.png
@@ -133,9 +143,11 @@ image: /peter_cartoon.png
 # Peter
 We need a Data Lake
 
-Our next actor in this story is entering the stage - let's call him
-Peter - yes that is really his name -
-and he got the task from his boss to build up a data lake infrastructure that allows the storage and work with vast amounts of data - and after speaking with Eliza, he realized that 
+Peter got the task to build a data lake and the requirements are:
+- scale infinitly
+- native accessible for all personas (DS, Eng, SQL)
+- structured & unstructured
+- in the cloud
 
 <v-click>
 <div style="display: flex; justify-content: center; align-items: center;">
@@ -174,38 +186,84 @@ image: /rules.png
 </v-click>
 
 ---
-layout: full
+layout: image-right
+image: /back_to_the_future.png
 ---
+# Let's jump some years to the future
+Data Lake architecture is implemented
 
-# Let's jump some years into the future!
+- all neccessary sources are ingested (only the neccessary ones)
+- time to data is down to minutes
+- production grade data products:
+  - ml based optimizations
+  - dashboards
+  - business relevant data sets
+
+
+<!-- # Let's jump some years into the future!
 <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/IIl8y89gGJM?si=Iy0dWcL_YqOyFLgD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-<picture>; " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+</div> -->
 
 ---
-layout: default
+layout: image-right
+image: /x_functional_teams.png
+---
+
+# Cross functional teams
+our actors found friends
+
+- Guenther joined the "Platform Team" aka the "Justice League"
+- Eliza joined the recomendation teams aka the "Avengers"
+
+---
+layout: image-right
+image: /desaster_eliza.png
+---
+
+# The recomendation broke down
+desaster for Team Avengers
+
+- shutdown of the whole system
+- no personalized home page for several days
+
+---
+layout: image-right
+image: /victory_pose.png
 ---
 
 # What has happened?
-
-<div style="display: flex; gap: 65px; align-items: center;">
-
-  <!-- First image -->
-  <v-click>
+1/3
+<v-click>
+  <div style="display: flex; justify-content: center; align-items: center;">
     <img src="/data_product_1.png" alt="Image 1" style="width: 90px;">
-  </v-click>
+  </div>
+</v-click>
+---
+layout: image-right
+image: /team_piggyback.png
+---
 
-  <!-- Second image -->
-  <v-click>
+# What has happened?
+2/3
+<v-click>
+  <div style="display: flex; justify-content: center; align-items: center;">
     <img src="/data_product_2.png" alt="Image 2" style="width: 210px;">
-  </v-click>
+  </div>
+</v-click>
 
-  <!-- Third image -->
-  <v-click>
+---
+layout: image-right
+image: /hulk_batman.png
+---
+
+# What has happened?
+3/3
+<v-click>
+  <div style="display: flex; justify-content: center; align-items: center;">
     <img src="/data_product_3.png" alt="Image 3" style="width: 273px;">
-  </v-click>
-
-</div>
+  </div>
+</v-click>
 
 ---
 layout: image-right
@@ -220,15 +278,6 @@ image: /tradeoff.png
   - the fastest and most expensive
 - Centralization
   - more cost-efficient 
----
-layout: image-right
-image: /shantytown.png
----
-
-# Nothing lasts as long as a temporary solution
-
-
-## Yes the team "just" wanted to build a prototype/PoC or first idea...
 
 ---
 layout: image-right
