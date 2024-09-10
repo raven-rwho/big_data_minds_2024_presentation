@@ -310,7 +310,7 @@ picture:
 [Book - Data Mesh](https://martinfowler.com/articles/data-mesh-principles.html)---
 
 ---
-theme: seriph
+layout: full
 ---
 
 # Data Products powered by Domain Driven Design
@@ -359,35 +359,92 @@ theme: seriph
 layout: full
 ---
 
-# What does this mean for us
+# Covered by Foundry
 
-- Luckily Foundry is dealing with most of that points points
-- Only Data sets that are listed in the data catalogue can be used from others
-- If you build something on top of a data set by someone else - tell them!
-- The lineage must be documented
+| **Characteristics**                    | **Status**        |
+| --------------------------------------- | ----------------- |
+| **Discoverable**                        | ✅                |
+| **Understandable**                      |                 |
+| **Addressable**                         | ✅                |
+| **Natively Accessible**                 | ✅                |
+| **Secure**                              | ✅                |
+| **Trustworthy**                         |                 |
+| **Valuable on its own**                 |                 |
+
+
+
+
+---
+layout: full
+---
+# Foundry Home
+
+<img src="/foundry_home.png" alt="Image" style="width: 100%; height: auto;">
+
+---
+layout: full
+---
+# Data Catalogue
+
+<img src="/catalogue.png" alt="Image" style="width: 100%; height: auto;">
+
+---
+layout: full
+---
+# Documentation
+
+<img src="/documentation.png" alt="Image" style="width: 100%; height: auto;">
+
+
+---
+layout: full
+---
+# Lineage
+
+<img src="/lineage.png" alt="Image" style="width: 100%; height: auto;">
 
 ---
 layout: image-right
 image: /shake_hands_heroes.png
 ---
 
-# Data as a product
+# Dataset as a product
 <v-click>
   <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="/data_product_mesh.png" alt="Image 3" style="width: 273px;">
+    <img src="/data_product_mesh.png" alt="Image 3" style="width: 400px;">
   </div>
 </v-click>
 
 <!-- add picture of the fixed graph-->
 
 ---
-layout: statement
+layout: image-right
+image: /missing.png
+---
+# not covered
+
+
+- no data contracts
+- no way to enforce communication with owners
+
+---
+layout: image-right
+image: /long_way.png
+---
+# long way to go
+
+- use the open API's of Foundry to track ownership
+- use the ontology to define data contracts
+- other aspects of data mesh
+  - business owners are not in the team
+
+---
+layout: image-right
+image: /mature_vs_start.png
 ---
 
 # Data Mesh or Central Data Team?
-
-
-50 shades of grey -> there is no binary answer. 
+no binary answer
 
 If your data product is mature enough that others wanna use it - it makes sense to build as a product - not before! It is quite some effort to maintain it and define an interface.
 
