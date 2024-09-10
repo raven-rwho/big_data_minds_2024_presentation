@@ -164,6 +164,7 @@ image: /foundry.png
 
 # Palantir Foundry
 <br>
+
 Luckily we had the possibility to introduce Foundry from the company Palantir quite fast in our org and by following a few simple rules (which were hard to maintain), we managed to build up an environment in which every employ who get's her login to our Single-Sign on has immediate access to all the data and access to a quite powerful tool-set to work with it
 
 ---
@@ -213,19 +214,20 @@ image: /x_functional_teams.png
 # Cross functional teams
 our actors found friends
 
-- Guenther joined the "Platform Team" aka the "Justice League"
+- Guenther joined the team "Justice League" and they are building optimizations for ad revenue
 - Eliza joined the recomendation teams aka the "Avengers"
 
 ---
 layout: image-right
-image: /desaster_eliza.png
+image: /desaster_batman.png
 ---
 
-# The recomendation broke down
-desaster for Team Avengers
+# The Ad System broke down
+desaster for Justice League
 
-- shutdown of the whole system
-- no personalized home page for several days
+- System generated prices which are way off
+- hard to track where the error comes from
+- significant financial impact
 
 ---
 layout: image-right
@@ -290,7 +292,8 @@ Like in the discusion about Micro Services or a monolithic structure - this is j
 <!-- add picture of the fixed graph-->
 
 ---
-theme: seriph
+layout: image-right
+picture: 
 ---
 
 # Core Ideas of Data Mesh
@@ -313,56 +316,43 @@ theme: seriph
 # Data Products powered by Domain Driven Design
 
 - **Discoverable**
-  - <small>Set of meta information to allow the automatic registration in a central registry.</small>
+  - Set of meta information to allow the automatic registration in a central registry.
 
 
 <v-click>
 
 - **Understandable**
   - The specific meaning of coherent data - what kind of entities and the relationships between them
-
 </v-click>
 
 <v-click>  
 
 - **Addressable**
   - A data product offers a permanent and unique address to allow the user or system to access it.
-  
 </v-click>
 
 <v-click>
 
 - **Natively Accessible**
   - It can be accessed by different personas - scientist (SQL), engineers (API) , analyst(Spreadsheet or SQL)
-
 </v-click>
 
 <v-click>
 
 - **Secure**
   - Encryption, Access Control, Data retention, Regulations, Confidentially Levels
-
 </v-click>
 
 <v-click>
 
 - **Trustworthy**
   - Interval of Change, Timeliness Completeness, Stat shape of data, precision&accuracy over time
-
-</v-click>
-
-<v-click>
-
-- **Interoperable**
-  - Type (explicitly defined types), polysemes identifiers, global adress, linking and reuse schema, data linking,
-
 </v-click>
 
 <v-click>
 
 - **Valuable on its own**
   - No need to add more to be generate value
-
 </v-click>
 
 ---
@@ -371,10 +361,24 @@ layout: full
 
 # What does this mean for us
 
-- Luckily Foundry is dealing with some points
+- Luckily Foundry is dealing with most of that points points
 - Only Data sets that are listed in the data catalogue can be used from others
 - If you build something on top of a data set by someone else - tell them!
 - The lineage must be documented
+
+---
+layout: image-right
+image: /shake_hands_heroes.png
+---
+
+# Data as a product
+<v-click>
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <img src="/data_product_mesh.png" alt="Image 3" style="width: 273px;">
+  </div>
+</v-click>
+
+<!-- add picture of the fixed graph-->
 
 ---
 layout: statement
