@@ -77,7 +77,7 @@ Günther aka PO central DWH -  he would love to help but...
 
 - There are analytical request from all parts of the org 
 - the data quality is - let's say questionable
-- dwh conssts of 2500 tables, without documentation and inconsistent naming (mapping tables from id_a -> id_b)
+- dwh consists of ~2500 tables, without documentation and inconsistent naming (mapping tables from id_a -> id_b)
 - the developer retention is 6 months
 - he is PO number 15 in 2 years
 
@@ -275,10 +275,17 @@ image: /tradeoff.png
 # Independent vs central
 
 
-## There is a indissoluble tradeoff between 
-- Independecy
+## indissoluble tradeoff
+<br>
+
+### Independency
   - the fastest and most expensive
-- Centralization
+  - things are doubled
+<br>
+<br>
+
+### Centralization
+  - controlled
   - more cost-efficient 
 
 ---
@@ -293,7 +300,7 @@ Like in the discusion about Micro Services or a monolithic structure - this is j
 
 ---
 layout: image-right
-picture: 
+image: data_mesh_book.jpg
 ---
 
 # Core Ideas of Data Mesh
@@ -307,7 +314,8 @@ picture:
 - Global federated Governance
 
 [Zhamak Dehghani](https://martinfowler.com/articles/data-mesh-principles.html)
-[Book - Data Mesh](https://martinfowler.com/articles/data-mesh-principles.html)---
+
+[Book - Data Mesh](https://martinfowler.com/articles/data-mesh-principles.html)
 
 ---
 layout: full
@@ -356,10 +364,11 @@ layout: full
 </v-click>
 
 ---
-layout: full
+layout: image-right
+image: foundry_mesh.png
 ---
 
-# Covered by Foundry
+# Data Mesh with Foundry
 
 | **Characteristics**                    | **Status**        |
 | --------------------------------------- | ----------------- |
@@ -370,9 +379,6 @@ layout: full
 | **Secure**                              | ✅                |
 | **Trustworthy**                         |                 |
 | **Valuable on its own**                 |                 |
-
-
-
 
 ---
 layout: full
@@ -439,16 +445,6 @@ image: /long_way.png
   - business owners are not in the team
 
 ---
-layout: image-right
-image: /mature_vs_start.png
----
-
-# Data Mesh or Central Data Team?
-no binary answer
-
-If your data product is mature enough that others wanna use it - it makes sense to build as a product - not before! It is quite some effort to maintain it and define an interface.
-
----
 layout: end
 class: text-center
 ---
@@ -470,12 +466,15 @@ class: text-center
 
 ---
 layout: image-right
-image: /eliza.png
+image: /mature_vs_start.png
 ---
-
 # A question that you might have
-What happened to Eliza?
 
-<v-click>
-She worked on several ML based products and was a core contributer to our dynamic pricing intiative - the churn use-case that she started with was ended quite soon...
-</v-click>
+Data Mesh or Central Data Team?
+
+## no binary answer!
+
+- depends on maturity of your data landscape 
+- like microservices this is all about scaling the org
+- if you need to work with many ppl on the same data - you need it
+- otherwise - go fast and break things
