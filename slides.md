@@ -428,16 +428,6 @@ image: /missing.png
 
 ---
 layout: image-right
-image: /galaxy.png
----
-# just a fraction
-
-- Foundry
-- Data Mesh
-- what we have done
-
----
-layout: image-right
 image: /long_way.png
 ---
 # long way to go
@@ -448,17 +438,50 @@ image: /long_way.png
   - business owners are not in the team
 
 ---
+layout: image-right
+image: /galaxy.png
+---
+# just a fraction
+
+- Foundry
+- Data Mesh
+- what we have done
+
+---
 layout: end
 class: text-center
 ---
 
 # Thank You
 
-### Thats me
+<br>
+<br>
 
-[Blog](https://pkrauss-hohl.site) · [GitHub](https://github.com/raven-rwho) · [Linkedin](https://www.linkedin.com/in/kraussdevelopment/)
+<br>
+<br>
 
-<PoweredBySlidev mt-10 />
+<div style="display: flex; justify-content: space-around; gap: 100px;">
+  <div style="display: flex; flex-direction: column; align-items: center;">
+      <p>
+        <a href="https://pkrauss-hohl.site" target="_blank">Blog</a>
+      </p>
+    <img src="/blog_qr.png" alt="Image 1" style="width: 200px;">
+  </div>
+  
+  <div style="display: flex; flex-direction: column; align-items: center;">
+     <p>
+      <a href="https://github.com/raven-rwho" target="_blank">Github</a>
+    </p>
+    <img src="/github_qr.png" alt="Image 2" style="width: 200px;">
+  </div>
+
+  <div style="display: flex; flex-direction: column; align-items: center;">
+     <p>
+      <a href="https://www.linkedin.com/in/kraussdevelopment/" target="_blank">Linkedin</a>
+    </p>
+    <img src="/linkedin_qr.png" alt="Image 3" style="width: 200px;">
+  </div>
+</div>
 
 ---
 layout: center
