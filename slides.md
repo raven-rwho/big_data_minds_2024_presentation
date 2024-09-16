@@ -236,11 +236,10 @@ image: /victory_pose.png
 
 # What has happened?
 1/3
-<v-click>
   <div style="display: flex; justify-content: center; align-items: center;">
     <img src="/data_product_1.png" alt="Image 1" style="width: 90px;">
   </div>
-</v-click>
+
 ---
 layout: image-right
 image: /team_piggyback.png
@@ -248,11 +247,9 @@ image: /team_piggyback.png
 
 # What has happened?
 2/3
-<v-click>
   <div style="display: flex; justify-content: center; align-items: center;">
     <img src="/data_product_2.png" alt="Image 2" style="width: 210px;">
   </div>
-</v-click>
 
 ---
 layout: image-right
@@ -261,11 +258,9 @@ image: /hulk_batman.png
 
 # What has happened?
 3/3
-<v-click>
   <div style="display: flex; justify-content: center; align-items: center;">
     <img src="/data_product_3.png" alt="Image 3" style="width: 273px;">
   </div>
-</v-click>
 
 ---
 layout: image-right
@@ -415,11 +410,9 @@ image: /shake_hands_heroes.png
 ---
 
 # Dataset as a product
-<v-click>
   <div style="display: flex; justify-content: center; align-items: center;">
     <img src="/data_product_mesh.png" alt="Image 3" style="width: 400px;">
   </div>
-</v-click>
 
 <!-- add picture of the fixed graph-->
 
@@ -432,6 +425,16 @@ image: /missing.png
 
 - no data contracts
 - no way to enforce communication with owners
+
+---
+layout: image-right
+image: /galaxy.png
+---
+# just a fraction
+
+- Foundry
+- Data Mesh
+- what we have done
 
 ---
 layout: image-right
