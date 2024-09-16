@@ -452,10 +452,15 @@ layout: end
 class: text-center
 ---
 
+<img src="/profil_peter.png" alt="profile picture" 
+     style="position: absolute; top: 20px; right: 120px; width: 150px;">
+
 # Thank You
 
 <br>
 <br>
+
+# Questions?
 
 <br>
 <br>
@@ -482,13 +487,6 @@ class: text-center
     <img src="/linkedin_qr.png" alt="Image 3" style="width: 200px;">
   </div>
 </div>
-
----
-layout: center
-class: text-center
----
-
-# Questions?
 
 ---
 layout: image-right
