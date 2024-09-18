@@ -22,4 +22,4 @@ packages/create-app/template/snippets
 packages/slidev/README.md
 packages/vscode/syntaxes/codeblock-patch.json
 slides-export.md
-*slides-export.pptx
+*.pptx
