@@ -375,34 +375,6 @@ image: foundry_mesh.png
 | **Trustworthy**                         |                 |
 | **Valuable on its own**                 |                 |
 
----
-layout: full
----
-# Foundry Home
-
-<img src="/foundry_home.png" alt="Image" style="width: 100%; height: auto;">
-
----
-layout: full
----
-# Data Catalogue
-
-<img src="/catalogue.png" alt="Image" style="width: 100%; height: auto;">
-
----
-layout: full
----
-# Documentation
-
-<img src="/documentation.png" alt="Image" style="width: 100%; height: auto;">
-
-
----
-layout: full
----
-# Lineage
-
-<img src="/lineage.png" alt="Image" style="width: 100%; height: auto;">
 
 ---
 layout: image-right
